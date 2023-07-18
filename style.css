@@ -41,7 +41,8 @@ body {
 .img-container{
     background-image: url(./assets/images/illustration-sign-up-mobile.svg);
     background-repeat: no-repeat;
-   background-size: contain;
+    background-size: cover;
+    border-radius: 0 0 2em 2em;
     height: 35vh;
     
 }
