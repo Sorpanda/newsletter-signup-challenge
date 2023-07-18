@@ -48,12 +48,11 @@ body {
 }
 
 .form-container {
-    margin: 2em 1em;
-    
+    margin: 2em 1em; 
 }
 
 .form__paragraph {
-    margin-top: 1em;
+    margin: 1em 0;
 }
 
 .icons-and-list{
@@ -75,6 +74,10 @@ ul {
     flex-direction: column;
     gap: 1em;
     justify-content: space-evenly;
+}
+
+form{
+    margin-top: 1em;
 }
 
 .list-item{
