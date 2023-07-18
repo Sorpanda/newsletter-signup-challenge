@@ -64,18 +64,17 @@ body {
 .icons{
     display: flex;
     flex-direction: column;
-    
     justify-content: space-evenly;
 }
 
 ul {
     list-style-type: none;
-    padding: 2em 0;
+    padding: 1em 0;
     font-weight: var(---fw-700-bold);
     display: flex;
     flex-direction: column;
-    gap: 1.8em;
-    justify-content: space-around;
+    gap: 1em;
+    justify-content: space-evenly;
 }
 
 .list-item{
