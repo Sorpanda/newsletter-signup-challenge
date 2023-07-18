@@ -1,0 +1,222 @@
+:root {
+    --primary-tomato-red: hsl(4, 100%, 67%);
+
+    --neutral-800-slate-grey: hsl(234, 29%, 20%);
+    --neutral-700-charcoal-grey: hsl(235, 18%, 26%);
+    --neutral-400-grey: hsl(231, 7%, 60%);
+    --neutral-100-white: hsl(0, 0%, 100%);
+
+    ---ff-Roboto: 'Roboto', sans-serif;
+    ---fw-400-regular: 400;
+    ---fw-700-bold: 700;
+
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+
+    font-family: var(---ff-Roboto);
+    font-size: 1.6rem;
+    color: var(--neutral-800-slate-grey);
+}
+
+.newsletter-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.img-container{
+    background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+    background-repeat: no-repeat;
+   background-size: contain;
+    height: 35vh;
+    
+}
+
+.form-container {
+    margin: 2em 1em;
+    
+}
+
+.form__paragraph {
+    margin-top: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 2em 0;
+    font-weight: var(---fw-700-bold);
+}
+
+.list-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    padding-bottom: .6em;
+}
+
+.label-and-error{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: var(---fw-700-bold);
+    margin-bottom: .5em;
+}
+
+input {
+    width: 100%;
+    padding: 1.5em;
+    border-radius: .5em;
+    border-color: var(--neutral-400-grey);
+    margin-bottom: 1em;
+}
+
+.submit-button{
+    width: 100%;
+    color: var(--neutral-100-white);
+    font-weight: var(---fw-700-bold);
+    background-color: var(--neutral-800-slate-grey);
+    border: none;
+    border-radius: .5em;
+    padding: 1.5em;
+}
+
+.submit-button:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: var(---fw-700-bold);
+}
+
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.error input {
+    border: 1px solid red;
+    color: red;
+    background-color: hsla(348, 100%, 61%, .1);
+}
+
+.error{
+    color:red;
+}
+
+.success-message{
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.success-message__paragraph{
+    margin-bottom: 5em;
+}
+
+.succes-message__dismiss-btn{
+        border: none;
+        background-image: linear-gradient(to left, #FF512F 0%, #DD2476  51%, #FF512F  100%);
+        margin: 10px;
+        padding: 1.5em;
+        width: 90%;
+        text-align: center;
+        font-weight: var(---fw-700-bold);
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+        cursor: pointer;
+      }
+
+      .succes-message__dismiss-btn:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+    
+
+#afterSubmit{
+    display: none;
+}
+
+.attribution { 
+    font-size: 1.4rem;
+    color: var(--neutral-800-slate-grey); 
+    text-align: center; 
+    margin-top: 1em;
+}
+
+.attribution a { 
+    color: hsl(9, 69%, 57%); 
+}
+
+
+@media (min-width:800px){
+    body{
+        place-content: center;
+        background-color: var(--neutral-800-slate-grey);
+    }
+
+    .newsletter-card {
+        flex-direction: row-reverse;
+        background-color: var(--neutral-100-white);
+        border-radius: 2em;
+    }
+
+    .img-container {
+        background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+        background-size: cover;
+        background-position: center;
+        width: 20em;
+        height: auto;
+        margin: 1.5em;
+        border-radius: 1em;
+    }
+
+    .form-container {
+       width: 25em;
+        padding: 2em 0 2em 2em;
+    }
+
+    h1{
+        font-size: 4.2rem;
+    }
+
+    .attribution {
+        color: var(--neutral-100-white);
+    }
+
+    .success-message{
+        background-color: var(--neutral-100-white);
+        padding: 2em;
+        width: 25em;
+        border-radius: 2em;
+    }
+
+    .success-message__paragraph{
+        margin-bottom: 0;
+    }
+
+}
